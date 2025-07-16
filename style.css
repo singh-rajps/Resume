@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f4f4;
+}
+
+.resume {
+  display: flex;
+  max-width: 1000px;
+  margin: 20px auto;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.sidebar {
+  background-color: #2c3e50;
+  color: white;
+  width: 280px;
+  padding: 20px;
+}
+
+.profile-pic {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-pic img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ecf0f1;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 22px;
+}
+
+.contact p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.section {
+  margin-top: 20px;
+}
+
+.section h3 {
+  font-size: 16px;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 5px;
+}
+
+.section ul {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+}
+
+.section ul li {
+  margin: 5px 0;
+}
+
+.section a {
+  color: #1abc9c;
+  text-decoration: none;
+}
+
+.content {
+  padding: 20px;
+  width: 100%;
+}
+
+.content h2 {
+  color: #2c3e50;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.content p, .content ul, .content ol {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.content ul, .content ol {
+  margin-left: 20px;
+}
+
+.content strong {
+  color: #000;
+}
+
+.download-btn {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #1abc9c;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.download-btn:hover {
+  background-color: #16a085;
+}
+
+@media (max-width: 768px) {
+  .resume {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .content {
+    padding: 15px;
+  }
+}
