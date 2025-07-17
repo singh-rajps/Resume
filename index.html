@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pushpraj Kumar Singh - Resume</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <div class="resume">
     <!-- LEFT SIDEBAR -->
@@ -30,6 +32,7 @@
           <li>AWS (Lambda, EC2, S3)</li>
           <li>Kafka / RabbitMQ</li>
           <li>MongoDB / PostgreSQL / MySQL / Cassandra</li>
+          <li>Jest,playwright</li>
         </ul>
       </div>
 
@@ -58,7 +61,10 @@
       <section>
         <h2>PROFESSIONAL SUMMARY</h2>
         <p>
-          5.7 years of backend experience with Node.js, Express, and microservices architecture. Hands-on experience with AWS (Lambda, S3, EC2), frontend with React.js and TypeScript, GraphQL/RESTful APIs, Kafka/RabbitMQ messaging, databases (MongoDB, PostgreSQL, MySQL, Cassandra), DevOps tools (Jenkins, Docker), and microservice patterns (SOLID, CQRS, Repository).
+          5.7 years of backend experience with Node.js, Express, and microservices architecture. Hands-on experience
+          with AWS (Lambda, S3, EC2), frontend with React.js and TypeScript, GraphQL/RESTful APIs, Kafka/RabbitMQ
+          messaging, databases (MongoDB, PostgreSQL, MySQL, Cassandra), DevOps tools (Jenkins, Docker), and microservice
+          patterns (SOLID, CQRS, Repository).
         </p>
       </section>
 
@@ -76,15 +82,59 @@
       <section>
         <h2>KEY PROJECTS</h2>
         <ol>
-          <li><strong>Node Chat App:</strong> Real-time app using Socket.io, React, Express.</li>
-          <li><strong>Neopride:</strong> Migrated APIs to MongoDB using Mongoose, EJS templates.</li>
-          <li><strong>TE_skyems:</strong> Lambda + Cassandra based telemetry app.</li>
-          <li><strong>DHA (DXC):</strong> MSSQL APIs, Microsoft Teams PBX integration.</li>
-          <li><strong>Worktual TeamMeets:</strong> Video backend, Mongo→MySQL, CI/CD. <a href="https://worktual.in/" target="_blank">Live</a></li>
-          <li><strong>Samsung Shop App:</strong> PostgreSQL + S3, Hapi.js microservices, Kibana logs.</li>
-          <li><strong>Device Register:</strong> Prisma ORM, Docker, DynamoDB/MySQL dual DB.</li>
-          <li><strong>M2M CAMI:</strong> Kafka sync testing microservice using Redis, Localstack.</li>
-          <li><strong>SecOps CQRS Bug:</strong> Debugged Elasticsearch query mismatch and logs.</li>
+          <li><strong>Node Chat App:</strong> Real-time app using Socket.io, React, Express.<br>
+            • Real-time messaging app with WebSocket (socket.io) for live chat functionality.<br>
+            • No database dependency; managed transient user state in memory.<br>
+            • Built frontend using React with event-driven UI updates
+          </li>
+          <li><strong>Neopride:</strong> Migrated APIs to MongoDB using Mongoose, EJS templates.<br>
+            • Built dynamic forms and validation flows for user data submissions.<br>
+            • Integrated backend logic with server-side rendering and EJS templates.
+          </li>
+          <li><strong>TE_skyems:</strong> Lambda + Cassandra based telemetry app.
+            • Built a scalable telemetry app using AWS Lambda and Cassandra database.<br>
+            • Implemented event-driven architecture with microservices and message queues.<br>
+            • Wrote Cucumber-based unit and integration tests for Lambda triggers.
+          </li>
+          <li><strong>DHA (DXC):</strong> MSSQL APIs, Microsoft Teams PBX integration.<br>
+            • Developed RESTful APIs to replace legacy Oracle logic with MSSQL.<br>
+            • Integrated Microsoft Teams PBX for VoIP-based communication.<br>
+            • Migrated bulk legacy data and implemented optimized SQL procedures.
+
+          </li>
+          <li><strong>Worktual TeamMeets:</strong> Video backend, Mongo→MySQL, CI/CD.<br>
+            • Migrated video-related features from MongoDB to MySQL.<br>
+            • Set up CI/CD workflows using Jenkins and deployed via Docker containers.
+
+            <a href="https://worktual.in/" target="_blank">Live</a>
+          </li>
+          <li><strong>Samsung Shop App:</strong> PostgreSQL + S3, Hapi.js microservices, Kibana logs.<br>
+            • Developed PostgreSQL APIs and cron jobs for scheduled promotions.<br>
+            • Integrated AWS S3 for product image management.<br>
+            • Used Kibana for log tracking and alerting.<br>
+            • Implemented modular roles via Hapi.js plugin-based architecture.
+
+          </li>
+          <li><strong>Device Register:</strong> Prisma ORM, Docker, DynamoDB/MySQL dual DB.<br>
+            • Managed device lifecycle events like registration and deactivation.<br>
+            • Enabled dual-database support with Prisma ORM.<br>
+            • Packaged service using Docker for deployment in multiple environments.
+
+          </li>
+          <li><strong>M2M CAMI:</strong> Kafka sync testing microservice using Redis, Localstack.<br>
+            • Validated UPH and APH Kafka and RabbitMQ sync using test automation framework.<br>
+            • Used Localstack to simulate AWS services locally.<br>
+            • Captured GraphQL mutation snapshots and tracked intermediate sync states in Redis.
+
+          </li>
+          <li><strong>SecOps CQRS Bug:</strong> Debugged Elasticsearch query mismatch and logs.<br>
+            • Analyzed request payloads and sort parameters via CURL scripts.<br>
+            • Improved read-model consistency and search index mappings.<br>
+            • Diagnosed API-level sorting issues using Elasticsearch logs and CURL-based tests.<br>
+            • Traced sorting bugs to read model mismatches in the CQRS architecture.<br>
+            • Contributed fixes and enhanced API logging for better observability.
+
+          </li>
         </ol>
       </section>
 
@@ -117,21 +167,23 @@
       </section>
 
       <section style="margin-top: 20px;">
-        <a id="downloadResume" href="#" class="download-btn">⬇️ Download Resume</a>
+        <!-- <a id="downloadResume" href="#" class="download-btn">⬇️ Download Resume</a> -->
+        <button onclick="window.print()">Download Resume</button>
+
 
       </section>
     </main>
   </div>
   <script>
-  document.getElementById("downloadResume").addEventListener("click", function () {
-    const link = document.createElement("a");
-    link.href = "Pushpraj_Singh_Resume.pdf";
-    link.download = "Pushpraj_Singh_Resume.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  });
-</script>
+    document.getElementById("downloadResume").addEventListener("click", function () {
+      const link = document.createElement("a");
+      link.href = "Pushpraj_Singh_Resume.docx";
+      link.download = "Pushpraj_Singh_Resume.docx";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  </script>
 
 </body>
 </html>
